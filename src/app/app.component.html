@@ -1,0 +1,33 @@
+<header class="navbar-fixed">
+  <nav class="menu">
+    <div class="nav-wrapper container">
+      <a routerLink="" class="brand-logo">Rotas</a>
+      <ul class="recuo-menu hide-on-med-and-down">
+        <li routerLinkActive="active"><a routerLink="/rotas">Rotas</a></li>
+        <li routerLinkActive="active"><a routerLink="/usuario/login">Login</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a (click)="logout()"><i class="material-icons">exit_to_app</i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <ul id="" class="">
+    <li routerLinkActive="active"><a routerLink="/setores">Setores</a></li>
+    <li class=""></li>
+    <li routerLinkActive="active"><a routerLink="/tipos">Tipos</a></li>
+    <li class=""></li>
+    <li routerLinkActive="active"><a routerLink="/blocos">Blocos</a></li>
+  </ul>
+</header>
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
+<div class="footer-copyright">
+  <footer class="grey darken-3 rodape branco">
+    <div class="container">
+      TrixLog - Neto Deolino
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,26 @@
+<h1>Cadastrar Usuário</h1>
+
+<form [formGroup]="cadastro" class="">
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="nome" type="text" name="nome" formControlName="nome" [(ngModel)]="usuario.nome" class="validate">
+      <label for="nome">Nome</label>
+    </div>
+
+    <div class="input-field col s12">
+      <input id="login" type="text" name="login" formControlName="login" [(ngModel)]="usuario.login" class="validate">
+      <label for="login">Login</label>
+    </div>
+
+    <div class="input-field col s12">
+      <input id="senha" type="password" name="senha" formControlName="senha" [(ngModel)]="usuario.senha" class="validate">
+      <label for="senha">Senha</label>
+    </div>
+
+    <div class="col s12">
+      <a class="btn waves-effect waves-light orange accent-4" [class.disabled]="cadastro.invalid" (click)="salvar()">
+        <i class="">done</i>Salvar
+      </a>
+    </div>
+  </div>
+</form>

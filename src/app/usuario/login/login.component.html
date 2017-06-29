@@ -1,0 +1,24 @@
+<div class="valign-wrapper login-wrapper">
+  <form [formGroup]="loginForm" class="card login-card">
+
+    <div class="card-image login-image">
+      <img src="assets/img/logo.png" alt="TrixLog" />
+    </div>
+
+    <div class="card-content valign-wrapper">
+      <div class="row no-margin">
+        <div class="input-field col s12">
+          <input id="login" type="text" name="login" formControlName="login" [(ngModel)]="usuario.login" class="validate" />
+          <label for="login">Login</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="senha" type="password" name="senha" formControlName="senha" [(ngModel)]="usuario.senha" class="validate" />
+          <label for="senha">Senha</label>
+        </div>
+        <div class="col s12">
+          <button type="submit" name="action" class="btn-large btn-login block waves-effect waves-light" [class.disabled]="loginForm.invalid" (click)="login()">Entrar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

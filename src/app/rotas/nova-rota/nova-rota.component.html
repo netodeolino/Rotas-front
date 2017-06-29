@@ -1,0 +1,19 @@
+<h1>Nova Rota</h1>
+
+<form [formGroup]="cadastro" class="">
+  <div class="">
+    <div class="">
+      <input id="name" type="text" name="name" formControlName="name" [(ngModel)]="rota.name" class="validate">
+      <label for="name">Nome</label>
+    </div>
+  </div>
+  <div class="">
+    <div class="">
+      <input id="vehicleId" type="number" name="vehicleId" formControlName="vehicleId" [(ngModel)]="rota.vehicleIde" class="validate">
+      <label for="vehicleId">Nome</label>
+    </div>
+  </div>
+  <a class="" [class.disabled]="cadastro.invalid" (click)="salvar()">
+    <i class="">done</i>Salvar
+  </a>
+</form>

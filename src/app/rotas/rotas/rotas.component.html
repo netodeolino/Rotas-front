@@ -1,0 +1,37 @@
+<h1>Rotas</h1>
+
+<table class="">
+    <thead>
+        <tr>
+            <th class="">Nome</th>
+            <th class="" style="width:84px;">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rota of rotas">
+            <td>{{ rota.nome }}</td>
+            <td class="" style="width:84px;">
+                <a (click)="editar(rota)" class="">
+                    <i class="">create</i>
+                </a>
+                <a (click)="excluir(rota)" class="">
+                    <i class="">delete</i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<style type="text/css">
+    #mapid { height: 180px; }
+</style>
+
+<h1>map</h1>
+
+<div id="mapid"></div>
+
+<div leaflet style="height: 300px;"
+     [leafletOptions]="options">
+</div>
+
+
