@@ -2,7 +2,7 @@ import { Coordenadas } from './coordenadas';
 import { Parada } from './parada';
 
 export class Rota {
-    id: number;
+    rotaId: number;
     name: string;
     routeDate: any;
     vehicleId: number;

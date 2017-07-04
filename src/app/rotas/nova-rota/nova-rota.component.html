@@ -1,19 +1,25 @@
 <h1>Nova Rota</h1>
 
-<form [formGroup]="cadastro" class="">
-  <div class="">
-    <div class="">
+<form [formGroup]="cadastro" class="col s12">
+  <div class="row">
+    <div class="input-field col s12">
       <input id="name" type="text" name="name" formControlName="name" [(ngModel)]="rota.name" class="validate">
       <label for="name">Nome</label>
     </div>
   </div>
-  <div class="">
-    <div class="">
-      <input id="vehicleId" type="number" name="vehicleId" formControlName="vehicleId" [(ngModel)]="rota.vehicleIde" class="validate">
-      <label for="vehicleId">Nome</label>
+  <div class="input-field col s12">
+    <select materialize="material_select" [materializeSelectOptions]="veiculos" [(ngModel)]="rota.vehicleId" formControlName="veiculo" id="veiculo" name="veiculo">
+      <option *ngFor="let veiculo of veiculos" [value]="veiculo.vehicleId">{{ veiculo.placa }}</option>
+    </select>
+    <label>Veículo</label>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="routeDate" type="date" materialize="pickadate" name="routeDate" formControlName="routeDate" [(ngModel)]="rota.routeDate" [materializeParams]="[{format: 'dd/mmmm/yyyy'}]">
+      <label for="routeDate">Data da Rota</label>
     </div>
   </div>
-  <a class="" [class.disabled]="cadastro.invalid" (click)="salvar()">
-    <i class="">done</i>Salvar
+  <a class="btn waves-effect waves-light orange accent-4" [class.disabled]="cadastro.invalid" (click)="salvar()">
+    <i class="material-icons left">done</i>Salvar
   </a>
 </form>
